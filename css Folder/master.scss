@@ -1,0 +1,476 @@
+body {
+    height: 7000px;
+}
+* {
+    font-family:Raleway ;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+button {
+    cursor: pointer;
+}
+button,
+input,
+textarea {
+    background-color: transparent;
+}
+ul {
+    display: block;
+}
+li {
+    display: inline-block;
+}
+:root {
+    --inside:  10%;
+}
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+// =============== HEADER  ===============
+.header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    background: url(/img/home1.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    // HEAD
+    .HEAD {
+        padding: 0 var(--inside);
+        width: 100%;
+        height: 70px;
+        position: fixed;
+        left: 0;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 5555555555;
+        transition: 0.4s;
+
+        // NAV
+        .nav li a {
+            color: white;
+            font-size: 1.1em;
+            margin: 0 10px;
+        }
+    }
+    .HEAD.active {
+        background-color: white;
+        box-shadow: 0 0px 6px #C0C0C0;
+        h1 {
+            color: #114c57;
+        }
+        .nav li a {
+            color: #114c57;
+        }
+    }
+    // HERO
+    .HERO {
+        padding: 0 var(--inside);
+        h4 {
+            font-family:Raleway ;
+        }
+        h1 {
+            font-family:Raleway ;
+            font-size: 4.5em;
+            font-weight: 400;
+            span {
+                font-weight: 600;
+            }
+        }
+        button {
+            padding: 15px 30px;
+            background-color:#114c57;
+            border-radius: 2px;
+            margin: 25px 0;
+            a {
+                color: white;
+                font-size: 1.1em;
+                font-weight: 500;
+                ion-icon {
+                    transform: translateY(2px);
+                }
+            }
+        }
+        // ICONS LIST 
+        .icons-list{
+            position: absolute;
+            bottom: 30px;
+        }
+        .icons-list ion-icon {
+            color: white;
+            font-size: 1.5em;
+            margin: 0 35px 0 0;
+
+        }
+        // NOTOFICATION BOX 
+        .notification-box {
+            position: absolute;
+            bottom: 30px;
+            right: 10%;
+            width: 350px;
+            height: 150px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background-color: #114c57;
+            color: white;
+            .text {
+                width: 50%;
+                h3 {
+                    font-size: 1em;
+                    font-weight: 500;
+                    font-family: Poppins;
+                }
+                button {
+                    margin: 10px 0;
+                    padding: 0;
+                }
+
+            }
+            .img {
+                width: 50%;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    transition: 2s;
+                    &:hover {
+                        transform: scale(1.4);
+                    }
+                }
+            }
+        }
+
+
+
+
+
+    }
+
+
+
+}
+// =============== /HEADER  ===============
+
+
+// =============== ABOUT PART  ===============
+.about-container {
+    padding: 150px var(--inside);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+     > div {
+        width: 50%;
+    }
+    .about-left  {
+        width: 44%;
+        h1 {
+            font-size: 2.5em;
+            color: #114c57;
+        }
+        p {
+            font-size: 0.9em;
+            color: #114c57;
+            font-weight: 600;
+            margin: 30px 0;
+        }
+        button {
+            padding: 15px 25px;
+            background-color:#114c57;
+            border-radius: 2px;
+            a {
+                color: white;
+                font-size: 1.1em;
+                font-weight: 500;
+                ion-icon {
+                    transform: translateY(2px);
+                }
+            }
+        }
+    }
+    .about-right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 10px;
+       .img {
+        overflow: hidden;
+        border-radius: 3px;
+        img {
+            width: 270px;
+            transition: 2s;
+        }
+        .e {
+            width: 350px;
+        }
+        :hover {
+            transform: scale(1.4);
+        }
+       }
+    }
+}
+// =============== ABOUT PART ===============
+
+
+// =============== DISCOVER CONTAINER===============
+.discover-container {
+    padding: 100px var(--inside);
+    > h2 {
+        text-align: center;
+        color: #114c57;
+        font-size: 3em;
+        font-weight: 500;
+    }
+    .box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 60px;
+        .place {
+            width: 32%;
+            height: 450px;
+            background: url(/img/discover1.jpg) no-repeat;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            .text {
+                position: absolute;
+                bottom: 30px;
+                left: 20px;
+                color: white;
+                z-index: 3;
+                h3 {
+                    font-size: 2.5em;
+                    font-weight: 500;
+                }
+                p {
+                    font-family: Poppins;
+                }
+            }
+        }
+        .place::before {
+            content: "";
+            background-color: rgba(8, 8, 8, 0.308);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+        .place:nth-child(2) {
+            background: url(/img/discover2.jpg) no-repeat;
+            height: 550px;
+        }
+        .place:nth-child(3) {
+            background: url(/img/discover3.jpg) no-repeat;
+        }
+    }
+}
+// =============== /DISCOVER CONTAINER===============
+
+
+
+// =============== SEVICES CONTAINER===============
+.services-container {
+    padding: 100px var(--inside);
+    >h2 {
+        font-size: 4em;
+        color: #114c57;
+        text-align: center;
+        font-weight: 500;
+    }
+    .counter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 100px;
+        margin-top: 30px;
+        h3 {
+            font-size: 1.7em;
+            color: #114c57;
+        }
+        p {
+            margin-top: 5px;
+            font-weight: 600;
+            font-size: 1.1em;
+            color: #727272;
+        }
+    }
+    .gallery {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        .img:nth-child(1) {
+            img {
+                transform: translateX(60px);
+            }
+        }
+        .img:nth-child(2) {
+            img {
+                width: 300px;
+                transform: translate(-20px , 70px);
+            }
+        }
+    }
+
+}
+// =============== /SEVICES CONTAINER===============
+
+
+// =============== PLACES CONTAINER===============
+.place-container {
+    padding: 100px var(--inside);
+    >h2 {
+        font-weight: 500;
+        color: #114c57;
+        font-size: 3.5em;
+        text-align: center;
+    }
+    .box {
+        display: flex;
+        justify-content:flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        column-gap: 2%;
+        margin-top: 50px;
+    }
+
+    .place {
+        width: 32%;
+        height: 500px;
+        position: relative;
+        margin: 10px 0;
+        color: white;
+        overflow: hidden;
+        img {
+            transition: 2s;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+        }
+        .stars {
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            right: 15px;
+            top: 10px;
+            column-gap: 5px;
+            
+            p {
+                font-family: Poppins;
+            }
+        }
+        .direction {
+            position: absolute;
+            bottom: 100px;
+            left: 15px;
+            h3 {
+                font-size: 2em;
+                font-weight: 500;
+            }
+            p {
+                letter-spacing: 1px;
+                margin: 10px 0;
+            }
+            
+        }
+        .price {
+            width: 100%;
+            padding: 0 15px;
+            position: absolute;
+            bottom: 30px;
+            
+            h3 {
+                font-size: 1.5em;
+                font-weight: 400;
+                font-family: Poppins;
+            } 
+           
+        }
+        button {
+            padding: 15px 25px;
+            background-color: #114c57;
+            position: absolute;
+            bottom:0 ;
+            right: 0;
+        }
+        ion-icon {
+            color: white;
+            font-size: 1.4em;
+         
+        }
+    }
+    .place:hover img {
+        transform: scale(1.5);
+    }
+}
+
+// =============== /PLACES CONTAINER===============
+
+
+
+
+// =============== VIDEO PART===============
+.video-container{
+    border: 2px solid red ;
+    padding: 100px var(--inside);
+    text-align: center;
+    >h2 {
+        text-align: center;
+        font-weight: 500;
+        color: #114c57;
+        margin: 20px 0;
+    }
+    p {
+        color: #727272;
+        font-weight: 500;
+        margin: 0 200px;
+        line-height: 1.5;
+        font-size: 0.9em;
+    }
+    .video {
+        width: 100%;
+        height: 500px;
+        margin-top: 50px;
+        position: relative;
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 3px;
+        }
+        .video-btn {
+            background-color: #114c57;
+            padding: 15px 20px;
+            position: absolute;
+            right: 80px;
+            bottom: -30px;
+            border-radius: 3px;
+            ion-icon {
+                color: white;
+                font-size: 2em;
+            }
+        }
+    }
+}
+// =============== /VIDEO PART===============
+
+

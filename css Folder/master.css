@@ -1,0 +1,440 @@
+body {
+  height: 7000px;
+}
+
+* {
+  font-family: Raleway;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button,
+input,
+textarea {
+  background-color: transparent;
+}
+
+ul {
+  display: block;
+}
+
+li {
+  display: inline-block;
+}
+
+:root {
+  --inside: 10%;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+.header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  background: url(/img/home1.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.header .HEAD {
+  padding: 0 var(--inside);
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 5555555555;
+  transition: 0.4s;
+}
+.header .HEAD .nav li a {
+  color: white;
+  font-size: 1.1em;
+  margin: 0 10px;
+}
+.header .HEAD.active {
+  background-color: white;
+  box-shadow: 0 0px 6px #C0C0C0;
+}
+.header .HEAD.active h1 {
+  color: #114c57;
+}
+.header .HEAD.active .nav li a {
+  color: #114c57;
+}
+.header .HERO {
+  padding: 0 var(--inside);
+}
+.header .HERO h4 {
+  font-family: Raleway;
+}
+.header .HERO h1 {
+  font-family: Raleway;
+  font-size: 4.5em;
+  font-weight: 400;
+}
+.header .HERO h1 span {
+  font-weight: 600;
+}
+.header .HERO button {
+  padding: 15px 30px;
+  background-color: #114c57;
+  border-radius: 2px;
+  margin: 25px 0;
+}
+.header .HERO button a {
+  color: white;
+  font-size: 1.1em;
+  font-weight: 500;
+}
+.header .HERO button a ion-icon {
+  transform: translateY(2px);
+}
+.header .HERO .icons-list {
+  position: absolute;
+  bottom: 30px;
+}
+.header .HERO .icons-list ion-icon {
+  color: white;
+  font-size: 1.5em;
+  margin: 0 35px 0 0;
+}
+.header .HERO .notification-box {
+  position: absolute;
+  bottom: 30px;
+  right: 10%;
+  width: 350px;
+  height: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #114c57;
+  color: white;
+}
+.header .HERO .notification-box .text {
+  width: 50%;
+}
+.header .HERO .notification-box .text h3 {
+  font-size: 1em;
+  font-weight: 500;
+  font-family: Poppins;
+}
+.header .HERO .notification-box .text button {
+  margin: 10px 0;
+  padding: 0;
+}
+.header .HERO .notification-box .img {
+  width: 50%;
+  overflow: hidden;
+}
+.header .HERO .notification-box .img img {
+  width: 100%;
+  height: 100%;
+  transition: 2s;
+}
+.header .HERO .notification-box .img img:hover {
+  transform: scale(1.4);
+}
+
+.about-container {
+  padding: 150px var(--inside);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.about-container > div {
+  width: 50%;
+}
+.about-container .about-left {
+  width: 44%;
+}
+.about-container .about-left h1 {
+  font-size: 2.5em;
+  color: #114c57;
+}
+.about-container .about-left p {
+  font-size: 0.9em;
+  color: #114c57;
+  font-weight: 600;
+  margin: 30px 0;
+}
+.about-container .about-left button {
+  padding: 15px 25px;
+  background-color: #114c57;
+  border-radius: 2px;
+}
+.about-container .about-left button a {
+  color: white;
+  font-size: 1.1em;
+  font-weight: 500;
+}
+.about-container .about-left button a ion-icon {
+  transform: translateY(2px);
+}
+.about-container .about-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+.about-container .about-right .img {
+  overflow: hidden;
+  border-radius: 3px;
+}
+.about-container .about-right .img img {
+  width: 270px;
+  transition: 2s;
+}
+.about-container .about-right .img .e {
+  width: 350px;
+}
+.about-container .about-right .img :hover {
+  transform: scale(1.4);
+}
+
+.discover-container {
+  padding: 100px var(--inside);
+}
+.discover-container > h2 {
+  text-align: center;
+  color: #114c57;
+  font-size: 3em;
+  font-weight: 500;
+}
+.discover-container .box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 60px;
+}
+.discover-container .box .place {
+  width: 32%;
+  height: 450px;
+  background: url(/img/discover1.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.discover-container .box .place .text {
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+  color: white;
+  z-index: 3;
+}
+.discover-container .box .place .text h3 {
+  font-size: 2.5em;
+  font-weight: 500;
+}
+.discover-container .box .place .text p {
+  font-family: Poppins;
+}
+.discover-container .box .place::before {
+  content: "";
+  background-color: rgba(8, 8, 8, 0.308);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.discover-container .box .place:nth-child(2) {
+  background: url(/img/discover2.jpg) no-repeat;
+  height: 550px;
+}
+.discover-container .box .place:nth-child(3) {
+  background: url(/img/discover3.jpg) no-repeat;
+}
+
+.services-container {
+  padding: 100px var(--inside);
+}
+.services-container > h2 {
+  font-size: 4em;
+  color: #114c57;
+  text-align: center;
+  font-weight: 500;
+}
+.services-container .counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 100px;
+       column-gap: 100px;
+  margin-top: 30px;
+}
+.services-container .counter h3 {
+  font-size: 1.7em;
+  color: #114c57;
+}
+.services-container .counter p {
+  margin-top: 5px;
+  font-weight: 600;
+  font-size: 1.1em;
+  color: #727272;
+}
+.services-container .gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+.services-container .gallery .img:nth-child(1) img {
+  transform: translateX(60px);
+}
+.services-container .gallery .img:nth-child(2) img {
+  width: 300px;
+  transform: translate(-20px, 70px);
+}
+
+.place-container {
+  padding: 100px var(--inside);
+}
+.place-container > h2 {
+  font-weight: 500;
+  color: #114c57;
+  font-size: 3.5em;
+  text-align: center;
+}
+.place-container .box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  -moz-column-gap: 2%;
+       column-gap: 2%;
+  margin-top: 50px;
+}
+.place-container .place {
+  width: 32%;
+  height: 500px;
+  position: relative;
+  margin: 10px 0;
+  color: white;
+  overflow: hidden;
+}
+.place-container .place img {
+  transition: 2s;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+.place-container .place .stars {
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+}
+.place-container .place .stars p {
+  font-family: Poppins;
+}
+.place-container .place .direction {
+  position: absolute;
+  bottom: 100px;
+  left: 15px;
+}
+.place-container .place .direction h3 {
+  font-size: 2em;
+  font-weight: 500;
+}
+.place-container .place .direction p {
+  letter-spacing: 1px;
+  margin: 10px 0;
+}
+.place-container .place .price {
+  width: 100%;
+  padding: 0 15px;
+  position: absolute;
+  bottom: 30px;
+}
+.place-container .place .price h3 {
+  font-size: 1.5em;
+  font-weight: 400;
+  font-family: Poppins;
+}
+.place-container .place button {
+  padding: 15px 25px;
+  background-color: #114c57;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.place-container .place ion-icon {
+  color: white;
+  font-size: 1.4em;
+}
+.place-container .place:hover img {
+  transform: scale(1.5);
+}
+
+.video-container {
+  border: 2px solid red;
+  padding: 100px var(--inside);
+  text-align: center;
+}
+.video-container > h2 {
+  text-align: center;
+  font-weight: 500;
+  color: #114c57;
+  margin: 20px 0;
+}
+.video-container p {
+  color: #727272;
+  font-weight: 500;
+  margin: 0 200px;
+  line-height: 1.5;
+  font-size: 0.9em;
+}
+.video-container .video {
+  width: 100%;
+  height: 500px;
+  margin-top: 50px;
+  position: relative;
+}
+.video-container .video video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 3px;
+}
+.video-container .video .video-btn {
+  background-color: #114c57;
+  padding: 15px 20px;
+  position: absolute;
+  right: 80px;
+  bottom: -30px;
+  border-radius: 3px;
+}
+.video-container .video .video-btn ion-icon {
+  color: white;
+  font-size: 2em;
+}/*# sourceMappingURL=master.css.map */
